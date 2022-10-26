@@ -1,7 +1,15 @@
-import unsplash from "./unsplash.js"
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-unsplash("hello world",
-  (urls) => {
-    console.log(urls)
-  }
-)
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+
+
+reportWebVitals();

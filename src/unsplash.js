@@ -1,7 +1,11 @@
 import axios from "axios"
 
 export default function unsplash(sq, callback) {
-  axios.get(`https://unsplash.com/s/photos/${encodeURIComponent(sq)}`)
+  axios.get(`https://cors-anywhere.herokuapp.com/https://unsplash.com/s/photos/${encodeURIComponent(sq)}`, {
+    headers:{
+      origin: "https://unsplash.com/"
+    }
+  })
     .then(
       (page_source) => {
         var urls = page_source.data.match(/https:\/\/([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:\/~+#-]*[\w@?^=%&\/~+#-])/g);
