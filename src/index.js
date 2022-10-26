@@ -7,4 +7,4 @@ ReactDOM.render(
     <App />
   </React>,
   document.getElementById('root')
-)
+);
