@@ -14,7 +14,7 @@ function Home() {
 
 	return (
 		images.map((image, i) => (
-			<a ref="nofollow" target="_blank" href={image}>{image}</a>
+			<img src={image + "?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60"} alt={i} />
 		))
 	)
 }
