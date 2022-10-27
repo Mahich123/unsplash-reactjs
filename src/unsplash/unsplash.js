@@ -12,7 +12,7 @@ export default function unsplash(sq, callback) {
                     let urlparse = new URL(urls[i])
 
                     if (urlparse.hostname == "images.unsplash.com" && urlparse.pathname.substring(1, 6) == "photo") {
-                        imageURLs.add(urlparse.origin + urlparse.pathname)
+                        imageURLs.add(`${urlparse.origin}${urlparse.pathname}`)
                     }
                 }
 
